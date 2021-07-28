@@ -6,41 +6,14 @@ using System.Collections.Generic;
 
 namespace Solution
 {
-
-    public class RomanNumerals
+    using System;
+    using System.Collections.Generic;
+    class Permutations
     {
-        private const int V = 1000;
-
-        public static string ToRoman(int n)
+        public static List<string> SinglePermutations(string s)
         {
-            return "jhkhk";
-        }
-
-        public static int FromRoman(string romanNumeral)
-        {
-            Dictionary<char, int> romanNumbers = new Dictionary<char, int>();
-            romanNumbers.Add('o', -1);
-            romanNumbers.Add('I', 1);
-            romanNumbers.Add('V', 5);
-            romanNumbers.Add('X', 10);
-            romanNumbers.Add('L', 50);
-            romanNumbers.Add('C', 100);
-            romanNumbers.Add('D', 500);
-            romanNumbers.Add('M', 1000);
-            int sum = 0;
-            char temp = 'o';
-            foreach (char i in romanNumeral)
-            {
-                if (romanNumbers[i] > romanNumbers[temp]&& romanNumbers[temp]!=-1)
-                {
-                    sum -= romanNumbers[temp] * 2;
-                }
-                sum += romanNumbers[i];
-                temp = i;
-
-            }
-
-            return sum;
+            // Your code here!
+            return null;
         }
     }
 }
