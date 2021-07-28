@@ -19,6 +19,7 @@ namespace Solution
         public static int FromRoman(string romanNumeral)
         {
             Dictionary<char, int> romanNumbers = new Dictionary<char, int>();
+            romanNumbers.Add('o', -1);
             romanNumbers.Add('I', 1);
             romanNumbers.Add('V', 5);
             romanNumbers.Add('X', 10);
@@ -26,8 +27,20 @@ namespace Solution
             romanNumbers.Add('C', 100);
             romanNumbers.Add('D', 500);
             romanNumbers.Add('M', 1000);
-            int g = romanNumbers['I'];
-            return romanNumeral.Select(x=>romanNumbers[x]).Sum();
+            int sum = 0;
+            char temp = 'o';
+            foreach (char i in romanNumeral)
+            {
+                if (romanNumbers[i] > romanNumbers[temp]&& romanNumbers[temp]!=-1)
+                {
+                    sum -= romanNumbers[temp] * 2;
+                }
+                sum += romanNumbers[i];
+                temp = i;
+
+            }
+
+            return sum;
         }
     }
 }

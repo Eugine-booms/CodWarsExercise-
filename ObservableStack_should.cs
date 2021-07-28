@@ -52,6 +52,16 @@
 
                 Assert.AreEqual(expected, actual);
             }
+            [Test]
+            public void TestFromRoman_003()
+            {
+                string input = "IX";
+                int expected = 9;
+
+                int actual = RomanNumerals.FromRoman(input);
+
+                Assert.AreEqual(expected, actual);
+            }
         }
     }
 }
