@@ -7,27 +7,21 @@ using System.Collections.Generic;
 namespace Solution
 {
 
-    public class RomanNumerals
+    public class Sudoku
     {
-        private const int V = 1000;
-
-        public static string ToRoman(int n)
+        public static string DoneOrNot(int[][] board)
         {
-            return "jhkhk";
-        }
+            for (int i = 0; i < board.Length; i++)
+            {
 
-        public static int FromRoman(string romanNumeral)
-        {
-            Dictionary<char, int> romanNumbers = new Dictionary<char, int>();
-            romanNumbers.Add('I', 1);
-            romanNumbers.Add('V', 5);
-            romanNumbers.Add('X', 10);
-            romanNumbers.Add('L', 50);
-            romanNumbers.Add('C', 100);
-            romanNumbers.Add('D', 500);
-            romanNumbers.Add('M', 1000);
-            int g = romanNumbers['I'];
-            return romanNumeral.Select(x=>romanNumbers[x]).Sum();
+
+                for (int j = 0; j < board.Length; j++)
+                {
+
+                }
+            }
+            return "хуйня переделывай";
+            //your code here
         }
     }
 }
