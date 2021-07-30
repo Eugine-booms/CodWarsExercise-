@@ -11,7 +11,7 @@ namespace Solution
       
         internal static bool EveryDigitIsTheSameNumber(int number)
         {
-            throw new NotImplementedException();
+            return number.ToString().All(x => x == number.ToString()[0]);
         }
 
         internal static bool FollowedByAllZeros(int number)
