@@ -16,7 +16,7 @@ namespace Solution
 
         internal static bool FollowedByAllZeros(int number)
         {
-            throw new NotImplementedException();
+            return number.ToString().Skip(1).All(x => x == '0');
         }
 
         internal static bool AreSequentialIncementing(int number)
@@ -38,7 +38,7 @@ namespace Solution
 
         internal static bool IsAwesome(int number, List<int> awesomePhrases)
         {
-            return awesomePhrases.Any(x => x==number);
+            return awesomePhrases.Any(x => x == number);
         }
     }
 
@@ -48,14 +48,14 @@ namespace Solution
         {
             if (number < 100) return 0;
            
-            //bool a = Number.FollowedByAllZeros(number);
-            //bool b = Number.EveryDigitIsTheSameNumber(number);
+            bool a = Number.FollowedByAllZeros(number);
+            bool b = Number.EveryDigitIsTheSameNumber(number);
             //bool c = Number.AreSequentialIncementing(number);
             //bool d = Number.AreSequentialDecrimentind(number);
             bool e = Number.AreAPalindrome(number);
             bool f = Number.IsAwesome(number, awesomePhrases);
 
-            return e || f ? 2 
+            return e || f || a || b ? 2 
                 : IsInteresting(number + 1, awesomePhrases) == 2 ? 1 
                 : IsInteresting(number + 2, awesomePhrases) == 2 ? 1
                 :0;

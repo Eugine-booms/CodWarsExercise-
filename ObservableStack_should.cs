@@ -12,6 +12,9 @@ namespace Solution
         {
             Assert.AreEqual(0, Kata.IsInteresting(3, new List<int>() { 1337, 256 }));
             //Assert.AreEqual(1, Kata.IsInteresting(1336, new List<int>() { 1337, 256 }));
+            Assert.AreEqual(2, Kata.IsInteresting(7890, new List<int>() { 1337, 256 }));
+            Assert.AreEqual(2, Kata.IsInteresting(0123, new List<int>() { 1337, 256 }));
+            Assert.AreEqual(2, Kata.IsInteresting(1000, new List<int>() { 1337, 256 }));
             Assert.AreEqual(2, Kata.IsInteresting(1337, new List<int>() { 1337, 256 }));
             Assert.AreEqual(2, Kata.IsInteresting(11111, new List<int>() { 1337, 256 }));
             Assert.AreEqual(2, Kata.IsInteresting(1337, new List<int>() { 1337, 256 }));
