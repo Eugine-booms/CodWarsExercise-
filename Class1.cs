@@ -1,17 +1,14 @@
-﻿using System;
-
-using System.Net;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace Solution
 {
-     public static class Kata
+    public static class Kata
     {
         public static int recurs = 0;
         public static int IsInteresting(int number, List<int> awesomePhrases)
         {
-            if (number < 100) 
+            if (number < 98) 
                 return 0;
             bool a = FollowedByAllZeros(number);
             bool b = EveryDigitIsTheSameNumber(number);
@@ -25,6 +22,7 @@ namespace Solution
         }
         internal static bool EveryDigitIsTheSameNumber(int number)
         {
+            if (number < 100) return false;
             return number.ToString().All(x => x == number.ToString()[0]);
         }
         internal static bool FollowedByAllZeros(int number)
@@ -33,15 +31,27 @@ namespace Solution
         }
         internal static bool AreSequentialIncementing(int number)
         {
-            return false;//throw new NotImplementedException();
+            var temp = number.ToString().Select(x => x - 48).ToArray();
+            for (int i = 0; i < temp.Length - 1; i++)
+            {
+                if ((temp[i] + 1) % 10 != temp[i + 1] % 10) return false;
+            }
+            return true;
         }
         internal static bool AreSequentialDecrimentind(int number)
         {
-            return false; // throw new NotImplementedException();
+            if (number < 100) return false;
+            var temp = number.ToString().Select(x => x - 48).ToArray();
+            for (int i = 0; i < temp.Length - 1; i++)
+            {
+                if (temp[i + 1] < 0) return false;
+                if (temp[i] != temp[i + 1] + 1) return false;
+            }
+            return true;
         }
         internal static bool AreAPalindrome(int number)
         {
-            
+            if (number < 100) return false;
             return number.ToString().Equals(new string(number.ToString().ToCharArray().Reverse().ToArray()));
         }
 

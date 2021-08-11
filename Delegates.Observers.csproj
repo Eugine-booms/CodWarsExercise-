@@ -74,10 +74,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="ObservableStack_should.cs" />
+    <Compile Include="Programm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\New folder %282%29\Program.cs">
-      <Link>Program.cs</Link>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
