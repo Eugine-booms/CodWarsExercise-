@@ -1,12 +1,16 @@
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
+using System;
 using NUnitLite;
 
-class Program
+namespace Solution
 {
-	static void Main(string[] args)
+	class Program
 	{
-		new AutoRun().Execute(args);
-		System.Console.ReadLine();
+		static void Main(string[] args)
+		{
+			new AutoRun().Execute(args);
+			Console.ReadLine();
+
+		}
 	}
 }
