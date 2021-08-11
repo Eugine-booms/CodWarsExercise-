@@ -1,57 +1,26 @@
-﻿namespace Solution
+﻿using NUnit.Framework;
+using System;
+ namespace Solution
 {
-    using NUnit.Framework;
-    using System;
-    using System.Collections.Generic;
-
-    namespace Solution
+    public class SolutionTest
     {
-        [TestFixture]
-        public class SolutionTest
+
+        private static int[][][] matrix =
         {
-            //[Test]
-            //public void TestToRoman_001()
-            //{
-            //    int input = 1;
-            //    string expected = "I";
+        new int[][] { new [] { 1 } },
+        new int[][] { new [] { 1, 3 }, new [] { 2, 5 } },
+        new int[][] { new [] { 2, 5, 3 }, new [] { 1, -2, -1 }, new [] { 1, 3, 4 } }
+    };
 
-            //    string actual = RomanNumerals.ToRoman(input);
+        private static int[] expected = { 1, -1, -20 };
 
-            //    Assert.AreEqual(expected, actual);
-            //}
+        private static string[] msg = { "Determinant of a 1 x 1 matrix yields the value of the one element", "Should return 1 * 5 - 3 * 2 == -1 ", "" };
 
-            //[Test]
-            //public void TestToRoman_002()
-            //{
-            //    int input = 2;
-            //    string expected = "II";
-
-            //    string actual = RomanNumerals.ToRoman(input);
-
-            //    Assert.AreEqual(expected, actual);
-            //}
-
-            [Test]
-            public void TestFromRoman_001()
-            {
-                string input = "I";
-                int expected = 1;
-
-                int actual = RomanNumerals.FromRoman(input);
-
-                Assert.AreEqual(expected, actual);
-            }
-
-            [Test]
-            public void TestFromRoman_002()
-            {
-                string input = "II";
-                int expected = 2;
-
-                int actual = RomanNumerals.FromRoman(input);
-
-                Assert.AreEqual(expected, actual);
-            }
+        [Test]
+        public void SampleTests()
+        {
+            for (int n = 0; n < expected.Length; n++)
+                Assert.AreEqual(expected[n], Matrix.Determinant(matrix[n]), msg[n]);
         }
     }
 }
