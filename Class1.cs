@@ -1,43 +1,44 @@
 ﻿using System;
-
-using System.Net;
 using System.Linq;
-using System.Collections.Generic;
+using System.Text;
 
 namespace Solution
 {
-    
-    class Permutations
+
+    public class CodeWars
     {
-        
-        public static List<string> SinglePermutations(string s)
+        public static string encode(string text)
         {
-            List<string> resultListStr = new List<string>();
-            List<string> tempListStr = new List<string>();
-            int r = 0;
-            if (s.Length == 1|| s == string.Empty)
+            var a = text.Select(x => Convert.ToString((byte) x,2)).ToArray();
+            return string.Concat(string.Concat(text.Select(x => Convert.ToString(x, 2).PadLeft(8, '0'))).Select(x => x == '1' ? "111" : "000"));
+        }
+        public static string decode(string bits)
+        {
+            string decod = string.Empty;
+            var charArray= bits.ToArray();
+            var temp = new char[bits.Length/3];
+            for (int i = 0; i < bits.Length; i=i+3)
             {
-                resultListStr.Add(s);
-                return resultListStr;
-            }
-            if(s.Length==2)
-            {
-                resultListStr.Add(s);
-                resultListStr.Add(new string ( new char[] { s[1], s[0] } ));
-                return resultListStr.Distinct().ToList(); 
-            }
-            tempListStr.Clear();
-            foreach (var v in s)
-            {
-                tempListStr.AddRange(SinglePermutations(s.Remove(r,1)));
-                    r++;
-                foreach (var str in tempListStr)
+                if (charArray[i+1] == charArray[i + 2])
+                    temp[i / 3] = charArray[i+2];
+                else if (charArray[i]== charArray[i+1])
                 {
-                    resultListStr.Add(v.ToString() + str);
+                    temp[i / 3] = charArray[i];
                 }
-                tempListStr.Clear();
+                else if (charArray[i] == charArray[i + 2])
+                { 
+                    temp[i / 3] = charArray[i]; 
+                }
             }
-            return resultListStr.ToArray().Distinct().Where(x=>x.Length==s.Length).ToList();
+            var bytebliat = new byte[temp.Length / 8];
+            for (int i = 0; i < temp.Length; i = i + 8)
+            {
+                var tempArray = new char[8];
+                Array.Copy(temp, i, tempArray, 0, 8);
+                bytebliat[i/8] = Convert.ToByte(new string(tempArray), 2);
+            }
+            decod= Encoding.ASCII.GetString(bytebliat); 
+            return decod;
         }
     }
 }
