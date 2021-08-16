@@ -1,38 +1,41 @@
-﻿    using NUnit.Framework;
-    using System;
-    using System.Collections.Generic;
+﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using System.Linq;
-
 namespace Solution
+{
+    public class PrimesTest
     {
-       
-        public class SolutionTest
-        {
-            [Test]
-            public void Example1()
-            {
-                Assert.AreEqual(new List<string> { "a" }, Permutations.SinglePermutations("a").OrderBy(x => x).ToList());
-            }
+
         [Test]
-        public void Example1_2()
+        public void Test_0_10()
         {
-            Assert.AreEqual(new List<string> { "aa" }, Permutations.SinglePermutations("aa").OrderBy(x => x).ToList());
+            Test(0, 10, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29);
         }
 
         [Test]
-            public void Example2()
-            {
-                    Assert.AreEqual(new List<string> { "ab", "ba" }, Permutations.SinglePermutations("ab").OrderBy(x => x).ToList());
-            }
-        [Test]
-        public void Example2_1()
+        public void Test_10_10()
         {
-            Assert.AreEqual(new List<string> { "abc", "acb", "bac", "bca", "cab", "cba" }, Permutations.SinglePermutations("abc").OrderBy(x => x).ToList());
+            Test(10, 10, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71);
         }
+
         [Test]
-            public void Example3()
-            {
-                Assert.AreEqual(new List<string> { "aabb", "abab", "abba", "baab", "baba", "bbaa" }, Permutations.SinglePermutations("aabb").OrderBy(x => x).ToList());
-            }
+        public void Test_100_10()
+        {
+            Test(100, 10, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601);
         }
+
+        [Test]
+        public void Test_1000_10()
+        {
+            Test(1000, 10, 7927, 7933, 7937, 7949, 7951, 7963, 7993, 8009, 8011, 8017);
+        }
+
+        private void Test(int skip, int limit, params int[] expect)
+        {
+            int[] found = Primes.Stream().Skip(skip).Take(limit).ToArray();
+            Assert.AreEqual(expect, found);
+        }
+
     }
+}

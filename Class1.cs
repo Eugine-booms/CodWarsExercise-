@@ -1,43 +1,25 @@
-﻿using System;
-
-using System.Net;
-using System.Linq;
-using System.Collections.Generic;
-
+﻿using System.Linq;
 namespace Solution
 {
-    
-    class Permutations
+    using System.Collections.Generic;
+    public class Primes
     {
-        
-        public static List<string> SinglePermutations(string s)
+        public static IEnumerable<int> Stream()
         {
-            List<string> resultListStr = new List<string>();
-            List<string> tempListStr = new List<string>();
-            int r = 0;
-            if (s.Length == 1|| s == string.Empty)
-            {
-                resultListStr.Add(s);
-                return resultListStr;
-            }
-            if(s.Length==2)
-            {
-                resultListStr.Add(s);
-                resultListStr.Add(new string ( new char[] { s[1], s[0] } ));
-                return resultListStr.Distinct().ToList(); 
-            }
-            tempListStr.Clear();
-            foreach (var v in s)
-            {
-                tempListStr.AddRange(SinglePermutations(s.Remove(r,1)));
-                    r++;
-                foreach (var str in tempListStr)
+            
+                 var a=Enumerable.Range(2, int.MaxValue - 1).Where(number =>
                 {
-                    resultListStr.Add(v.ToString() + str);
-                }
-                tempListStr.Clear();
-            }
-            return resultListStr.ToArray().Distinct().Where(x=>x.Length==s.Length).ToList();
+                    if (number == 2 || number == 3)
+                        return true;
+                    if (number % 2 == 0 || number % 3 == 0)
+                        return false;
+                    for (var i = 5; i * i <= number; i = i + 6)
+                        if (number % i == 0 || number % (i + 2) == 0)
+                            return false;
+                    return true;
+                });
+            return a;
+
         }
     }
 }
