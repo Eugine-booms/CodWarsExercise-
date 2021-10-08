@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates.Observers", "Delegates.Observers.csproj", "{701502B0-D50D-424F-8DF1-E20E2B493874}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars", "CodeWars.csproj", "{701502B0-D50D-424F-8DF1-E20E2B493874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{701502B0-D50D-424F-8DF1-E20E2B493874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{701502B0-D50D-424F-8DF1-E20E2B493874}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{701502B0-D50D-424F-8DF1-E20E2B493874}.Debug|x86.ActiveCfg = Release|Any CPU
-		{701502B0-D50D-424F-8DF1-E20E2B493874}.Debug|x86.Build.0 = Release|Any CPU
+		{701502B0-D50D-424F-8DF1-E20E2B493874}.Debug|x86.ActiveCfg = Debug|x86
+		{701502B0-D50D-424F-8DF1-E20E2B493874}.Debug|x86.Build.0 = Debug|x86
 		{701502B0-D50D-424F-8DF1-E20E2B493874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{701502B0-D50D-424F-8DF1-E20E2B493874}.Release|Any CPU.Build.0 = Release|Any CPU
 		{701502B0-D50D-424F-8DF1-E20E2B493874}.Release|x86.ActiveCfg = Release|x86
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7A292796-2A4E-4942-9C6C-150EA96BA591}
+		SolutionGuid = {0E0E6193-F605-494F-967A-4D95717888A5}
 	EndGlobalSection
 EndGlobal
