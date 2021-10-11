@@ -73,8 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exercise\SquareEveryDigit\Kata.cs" />
+    <Compile Include="Exercise\TakeATenMinuteWalk\Kata.cs" />
     <Compile Include="Exercise\TexasHoldemHands\Kata.cs" />
     <Compile Include="Test\SquareEveryDigit_should.cs" />
+    <Compile Include="Test\TakeATenMinuteWalk_should.cs" />
     <Compile Include="Test\TexasHoldemHands_should.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
