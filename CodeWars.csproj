@@ -72,8 +72,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="ObservableStack_should.cs" />
+    <Compile Include="Exercise\SquareEveryDigit\Kata.cs" />
+    <Compile Include="Exercise\TexasHoldemHands\Kata.cs" />
+    <Compile Include="Test\SquareEveryDigit_should.cs" />
+    <Compile Include="Test\TexasHoldemHands_should.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
