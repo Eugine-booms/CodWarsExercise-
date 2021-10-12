@@ -76,6 +76,7 @@
     <Compile Include="Exercise\FindTheOddInt\Kata.cs" />
     <Compile Include="Exercise\Hamming Numbers_4ku\Hamming.cs" />
     <Compile Include="Exercise\IQTest_6ku\Kata.cs" />
+    <Compile Include="Exercise\Permutations\SinglePermutations.cs" />
     <Compile Include="Exercise\Range Extraction\Kata.cs" />
     <Compile Include="Exercise\Replace all dots\Kata.cs" />
     <Compile Include="Exercise\SquareEveryDigit\Kata.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Test\FindTheOddInt_should.cs" />
     <Compile Include="Test\Hamming_should.cs" />
     <Compile Include="Test\IQTest_should.cs" />
+    <Compile Include="Test\Permutations_should.cs" />
     <Compile Include="Test\RangeExtraction_should.cs" />
     <Compile Include="Test\ReplaceAllDots_should.cs" />
     <Compile Include="Test\SquareEveryDigit_should.cs" />

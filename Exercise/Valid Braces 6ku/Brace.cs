@@ -37,7 +37,6 @@
                         break;
                 }
             }
-            Console.WriteLine(braces);
             return stack.Count == 0;
         }
     }
