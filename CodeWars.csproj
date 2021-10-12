@@ -81,6 +81,7 @@
     <Compile Include="Exercise\SquareEveryDigit\Kata.cs" />
     <Compile Include="Exercise\TakeATenMinuteWalk\Kata.cs" />
     <Compile Include="Exercise\TexasHoldemHands\Kata.cs" />
+    <Compile Include="Exercise\Valid Braces 6ku\Brace.cs" />
     <Compile Include="Test\Array_diff_should.cs" />
     <Compile Include="Test\FindTheOddInt_should.cs" />
     <Compile Include="Test\Hamming_should.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Test\TexasHoldemHands_should.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\ValidBraces_should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
