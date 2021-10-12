@@ -77,6 +77,7 @@
     <Compile Include="Exercise\Hamming Numbers_4ku\Hamming.cs" />
     <Compile Include="Exercise\IQTest_6ku\Kata.cs" />
     <Compile Include="Exercise\Range Extraction\Kata.cs" />
+    <Compile Include="Exercise\Replace all dots\Kata.cs" />
     <Compile Include="Exercise\SquareEveryDigit\Kata.cs" />
     <Compile Include="Exercise\TakeATenMinuteWalk\Kata.cs" />
     <Compile Include="Exercise\TexasHoldemHands\Kata.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Test\Hamming_should.cs" />
     <Compile Include="Test\IQTest_should.cs" />
     <Compile Include="Test\RangeExtraction_should.cs" />
+    <Compile Include="Test\ReplaceAllDots_should.cs" />
     <Compile Include="Test\SquareEveryDigit_should.cs" />
     <Compile Include="Test\TakeATenMinuteWalk_should.cs" />
     <Compile Include="Test\TexasHoldemHands_should.cs" />
