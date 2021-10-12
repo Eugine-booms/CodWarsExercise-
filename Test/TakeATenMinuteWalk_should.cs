@@ -1,4 +1,4 @@
-﻿namespace Delegates.Observers.Exercise.TakeATenMinuteWalk
+﻿namespace CodeWarsExercise.TakeATenMinuteWalk
 {
     using NUnit.Framework;
     using System;

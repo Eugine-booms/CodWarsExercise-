@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Delegates.Observers.Exercise.TakeATenMinuteWalk
+namespace CodeWarsExercise.TakeATenMinuteWalk
 {
     public class Kata
     {

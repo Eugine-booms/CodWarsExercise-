@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Delegates.Observers.Exercise.Array_diff
+namespace CodeWarsExercise.Array_diff
 {
     public class Kata
     {

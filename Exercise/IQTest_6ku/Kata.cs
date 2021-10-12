@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Delegates.Observers.Exercise.IQTest_6ku
+namespace CodeWarsExercise.IQTest_6ku
 {
  
 

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Delegates.Observers.Exercise.FindTheOddInt
+namespace CodeWarsExercise.FindTheOddInt
 {
     internal class Kata
     {

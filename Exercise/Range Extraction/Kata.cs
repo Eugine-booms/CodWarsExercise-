@@ -1,4 +1,4 @@
-﻿namespace Delegates.Observers.Exercise.Range_Extraction
+﻿namespace CodeWarsExercise.Range_Extraction
 {
     public class RangeExtraction
     {

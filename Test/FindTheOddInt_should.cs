@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Delegates.Observers.Exercise.FindTheOddInt
+namespace CodeWarsExercise.FindTheOddInt
 {
     [TestFixture]
     public class FindTheOddInt_should
